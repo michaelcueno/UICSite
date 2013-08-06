@@ -1,11 +1,8 @@
+var links = $('#nav-links');
 var proj = $('#projects');
-var notes = $('#notes'); 
-var res = $('#resume'); 
-var web = $('#web'); 
-var projpl = $('#projects2');
-var notespl = $('#notes2'); 
-var respl = $('#resume2'); 
-var webpl = $('#web2'); 
+var notes = $('#notes');  notes.addClass('index2');
+var res = $('#resume'); res.addClass('index3');
+var web = $('#web'); web.addClass('index4'); 
 
 function kickoff() {
 	// Fade elements in 
@@ -32,30 +29,34 @@ function rotate(element, deg, toDeg) {
 	}, 5);
 }
 
-function shiftCenter(element) {
-	element.animate({left: "0px", 'margin-left': '0', 'margin-top': '0'});
-	element.css({'z-index': 100, position: 'absolute'});
-}
-
-function resetAllBut(element) {
-	if(element !== proj){
-		proj.animate({left: '0', 'margin-left': '0'})
-		rotate(proj, 0, 30);
-	} 
-	if(element !== notes){
-		notes.animate({
-			'margin-left': '-40px',
-	        'margin-top': '-19px',
-	    });
-	    notes.css({position: 'relative'})
-	    notes.css({position: 'relative'})
+function select(element) {
+	$("#myframe").css({"z-index": "200"});
+	element.remove();
+	links.prepend(element);
+	rotate(element, 30, 0);
+	for(var i=0; i < 4; i++){
+		$($('.categories')[i]).removeClass("index1 index2 index3 index4")
+		$($('.categories')[i]).css({
+			'z-index': "",
+			left: "",
+			'margin-left': "", 
+			'margin-top': "", 
+			'webkit-transform': "", 
+			'-moz-transform': "", 
+		});
+		$($('.categories')[i]).addClass('index'+(i+1)); 
 	}
+
+	element.animate({left: "0px", 'margin-left': '0', 'margin-top': '0'});
+	element.css({'z-index': 100});
+	// Reregister click event since we destroyed it on removal 
+	element.click( function() {select(element); setTimeout(function(){
+		$("#myframe").attr('src', 'pages/'+element.attr('id')+'.html');
+	});});
 }
 
 proj.click( function() { 
-	resetAllBut(proj);
-	rotate(proj, 30, 0);
-	shiftCenter(proj);
+	select(proj);
 	setTimeout(function() {
 		$('#myframe').attr('src', 'pages/projects.html');
 	}, 500);
@@ -63,21 +64,24 @@ proj.click( function() {
 
 
 notes.click( function() { 
-	resetAllBut(notes); 
-	rotate(notes, 30, 0);
-	shiftCenter(notes);
+	select(notes);
+	setTimeout(function() {
+		$('#myframe').attr('src', 'pages/notes.html');
+	}, 500);
 });
 
 web.click( function() { 
-	resetAllBut(web);
-	rotate(web, 30, 0);
-	shiftCenter(web);
+	select(web);
+	setTimeout(function() {
+		$('#myframe').attr('src', 'pages/web.html');
+	}, 500);
 });
 
 res.click( function() { 
-	resetAllBut(res);
-	rotate(res, 30, 0);
-	shiftCenter(res);
+	select(res);
+	setTimeout(function() {
+		$('#myframe').attr('src', 'pages/resume.html');
+	}, 500);
 });
 
 function hideAll() {

@@ -54,10 +54,11 @@ h2:hover {
      -moz-transition: opacity: 300;
   -webkit-transition: opacity: 300; 
   text-align: center; 
+  z-index: 1;
   cursor: pointer; }
 
 .categories:hover {
-  z-index: 101;
+  z-index: 201;
 }
 
 #filler {
@@ -67,32 +68,45 @@ h2:hover {
   border-right: 100px solid transparent;
   border-left: 170px solid transparent;
   top: 0;
-  right: -134px;
+  right: -50px;
+  z-index: 0;
 }
 
 #myframe {
-  margin-top: 40px;
+  position:absolute;
+  margin-top: -82px;
+  height: 90%;
+  width: 100%;
 }
 
 #projects {
   background-color: #FF4100; } 
 
 #notes { 
-  margin-left: -40px;
-  margin-top: -19px;
   background-color: #FF8500; } 
 
 #resume { 
-  margin-left: -80px;
-  margin-top: -19px;
   background-color: #0776A0; } 
 
 #web { 
-  margin-left: -120px;
-  margin-top: -19px;
   background-color: #00B454; } 
 
-.right-corner { 
+.index2{
+  margin-left: -40px;
+  margin-top: -19px;
+}
+
+.index3 {
+  margin-left: -80px;
+  margin-top: -19px;
+}
+
+.index4 {
+  margin-left: -120px;
+  margin-top: -19px;
+}  
+
+.nav-links { 
   position: absolute;
   width: 100%; }
 
@@ -100,5 +114,4 @@ h2:hover {
 .proj-content {
   display: none;
   float: right; }
-
 
