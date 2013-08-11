@@ -11,13 +11,7 @@ function kickoff() {
 	setTimeout(function(){res.fadeIn(500)},300);
 	setTimeout(function(){web.fadeIn(500)},400); 
 
-	
-	setTimeout(function(){lineEmUp();}, 900); 
 };
-
-function lineEmUp() {
-	//notes.animate({left: "38.6%", margin: "3% 0 0 0"}); 
-}
 
 function rotate(element, deg, toDeg) {
 	element.css({'webkit-transform': 'rotate(' + deg + 'deg)'});
@@ -30,7 +24,9 @@ function rotate(element, deg, toDeg) {
 }
 
 function select(element) {
+	// Load up the iframe 
 	$("#myframe").css({"z-index": "200"});
+	// Remove selected element from the DOM (This might not be the best way )
 	element.remove();
 	links.prepend(element);
 	rotate(element, 30, 0);
