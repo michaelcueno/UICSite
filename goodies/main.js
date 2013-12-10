@@ -3,6 +3,9 @@ var proj = $('#projects');
 var notes = $('#notes');  notes.addClass('index2');
 var res = $('#resume'); res.addClass('index3');
 var web = $('#web'); web.addClass('index4'); 
+var frame = $('#myframe'); frame.hide(); 
+
+var staged; // This holds the currently staged link
 
 function kickoff() {
 	// Fade elements in 
@@ -11,12 +14,14 @@ function kickoff() {
 	setTimeout(function(){res.fadeIn(500)},300);
 	setTimeout(function(){web.fadeIn(500)},400); 
 
-	
-	setTimeout(function(){lineEmUp();}, 900); 
+	frame.attr('src', 'pages/home.html');
+	setTimeout(function(){frame.fadeIn(500)},400); 
 };
 
-function lineEmUp() {
-	//notes.animate({left: "38.6%", margin: "3% 0 0 0"}); 
+function gotoHome(){
+	unStage(staged);
+	frame.attr('src', 'pages/home.html');
+	frame.css({'z-index':''});
 }
 
 function rotate(element, deg, toDeg) {
@@ -30,29 +35,39 @@ function rotate(element, deg, toDeg) {
 }
 
 function select(element) {
+	// Load up the iframe 
 	$("#myframe").css({"z-index": "200"});
-	element.remove();
-	links.prepend(element);
-	rotate(element, 30, 0);
-	for(var i=0; i < 4; i++){
-		$($('.categories')[i]).removeClass("index1 index2 index3 index4")
-		$($('.categories')[i]).css({
-			'z-index': "",
-			left: "",
-			'margin-left': "", 
-			'margin-top': "", 
-			'webkit-transform': "", 
-			'-moz-transform': "", 
-		});
-		$($('.categories')[i]).addClass('index'+(i+1)); 
-	}
+	// Remove selected element from the DOM (This might not be the best way )
+	unStage(staged);
+	stage(element);
+}
 
-	element.animate({left: "0px", 'margin-left': '0', 'margin-top': '0'});
-	element.css({'z-index': 100});
-	// Reregister click event since we destroyed it on removal 
-	element.click( function() {select(element); setTimeout(function(){
-		$("#myframe").attr('src', 'pages/'+element.attr('id')+'.html');
-	});});
+// Transformations to insert the link into the header of the page 
+function stage(e) {
+	staged = e; 
+	rotate(e, 30, 0);
+	e.css({'z-index': 100});
+	var topOffset; 
+	if(e === proj)
+		topOffset = 0; 
+	if(e === notes) 
+		topOffset = -27;
+	if(e === res) 
+		topOffset = -54;
+	if(e === web) 
+		topOffset = -81; 
+
+	e.animate({top: topOffset + 'px'}, 200);
+	e.animate({left: "0px", 'margin-left': '0'}); 
+}
+
+// Transformations to remove (unstage) the link and replace it back into the tray
+function unStage(e) {
+	if(e){
+		rotate(e, 0, 30);
+		e.css({left: "", 'margin-left': '', 'margin-top': '', 'z-index': '', top: ''});
+	}
+	 
 }
 
 proj.click( function() { 
@@ -61,7 +76,6 @@ proj.click( function() {
 		$('#myframe').attr('src', 'pages/projects.html');
 	}, 500);
 });
-
 
 notes.click( function() { 
 	select(notes);
@@ -83,9 +97,5 @@ res.click( function() {
 		$('#myframe').attr('src', 'pages/resume.html');
 	}, 500);
 });
-
-function hideAll() {
-$('.proj-content').hide();
-}
 
 kickoff(); 
