@@ -25,6 +25,11 @@ h2:hover {
   font-size: 22px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .container {
   height: 100%;
   width: 100%; } 
@@ -107,7 +112,7 @@ h2:hover {
 }  
 
 .nav-links { 
-  position: absolute;
+  position: fixed;
   width: 100%; }
 
 
