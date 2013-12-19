@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Design of WeatherStation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+      <link href="../../../goodies/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="../docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+  </head>
+
+   <body>
+
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">WeatherStation</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Overview</a></li>
+              <li class="active"><a href="design.html">Design</a></li>
+              <li><a href="download.html">Download</a></li>
+              <li><a href="http://github.com/mcueno2/WeatherStation">Source</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="hero-unit">
+        <h1>Design</h1>
+        <p>Concepts, Layouts, Interactions and Affordances</p>
+      </div>
+
+      <div class="row">
+        <div class="span9">
+          <h1>Concept</h1>
+          <p>The main idea behind this app was to give the user a 'view' into the weather. This was accomplished by instead of using the background as the main indicator of the weather instead of graphical icons. On the main page that users first see when starting the application, there are some weather stats in the center of the screen. The top portion of the stats are connected to the current hour, and the lower half depict the predictions and conditions for today's date. The top portion (hourly) changes as the user swpies left or right on the hours bar at the bottom of the screen. As the user swipes right, the hours go later into the day and the cosmic-unit (sun or moon on right hand side) will move up or down accordingly. The days underneath the hours bar will also change to indicate if the user has swiped enough hours to move into a different day. Combining these elements makes the user feel immersed in the application and makes for an interesting user experience for a weather application.</p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="span9">
+          <h1>Layout</h1>
+          </p>The app is laid out in two main units. The mainWindow and the Dashboard. The mainWindow is the first thing the user sees upon application start. It is defaulted to the city of Chicago, IL and shows the weather for the city. The Dashboard can be accessed via the top menu draggable icon. Once the user drags down the menu, they will see all the cities that they added in a grid-view and from here will have the option to: change the city represented in the mainWindow, add a new city, delete a city, change the units from US to Metric or select a different language (only english and swedish supported)</p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="span9">
+          <h1>Interaction</h1>
+            <p>The main interaction in the app is centered on the main screen. Here the user simply has three different actions that they can perform. First, the user can swipe left or right on the hours bar:</p>
+            <img src="../img/hours_bar.png"><br></br>
+            <p>And this will change the hourly temp, and condition in the top portion of the main-stats:</p>
+            <img src="../img/hourly-stats.png"><br></br>
+            <p>Otherwise, the user can tap on a specific day of the week to travel to the weather for that day. Lastly, the user can tap on the settings bar on the top of the screen to bring down the 'dashboard' or settings menu. From here the user can add new cities, change metrics/languages or can change the city currently viewed in the main window by tapping on a specific city.</p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="span9">
+          <h1>Affordance</h1>
+            <p>I tried to maintain good design practices in this project, following along with the notion of affordances. With every user interactionable item, I tried to imagine how the user would see it, and what kind of visual cues I could add to the interactions to make their purpose apparent.</p>
+            <h3>The hours swiper</h3>
+            <p>I had the option to make this swiper a horizontal bar instead of a curved one (it certainly would have been easier) but I was afraid that the user would not understand its purpose as well. With the curved bar, it becomes more obvious that the hour on top is the current hour rather than the left-most or right-most hour. Also, I think it makes for a prettier design, and allows more of a 'portal to the weather' feel.</p>
+            <h3>The Days bar</h3>
+            <img src="../img/days.png">
+            <p>The days bar is a fixed bar that shows the user what day he/she is currently viewing. It doubles as an information relay (if the user swipes to the right past 12:00am, the next day is illuminated to indicate what day the user has entered) and also as a button to jump to the day the user clicks on. Say the user clicks on 'Thursday' and today is Tuesday, the hours swiper will advance rapidly until Thrusday is illuminated on the day bar and the cosmic-unit will rise and fall at the same time until it settles on the appropriate hour. This makes for a nice feedback as the the user gets a sense of days passing as the sun and moon quickly rise and fall.</p>
+            <h3>The Menu bar</h3>
+            <img src="../img/menu_bar.png">
+            <p>At the top of the screen lays the menu bar. The affordance here is that most users are used to sliding a menu bar down from the top of their device (android, ipad) and also the three bars are typically used to indicate a menu. Clicking on this menu bar brings up the dashboard (or settings and cities view).</p>
+            <h3>Language Selector</h3>
+            <img src="../img/lang_up.png">
+            <p>Moving from left to right on the top of the settings bar in the dashboard we first come across the language selector. The user is faced with just a button that says 'English' and from here it becomes obvious that there is only one way to interact with it, to tap on it. When the user does this, the button expands with a drop down animation, revealing the rest of the language options.</p>
+            <img src="../img/lang_down.png">
+            <h3>Metric v. US selector</h3>
+            <p>The affordance here is hopefully apparent givin the visual representation of the depressed state of the fahrenheit symbol and the highlighted color. The user can switch beteen metrics by tapping either the F or C and the button changes respectively.</p>
+            <h3>New City</h3>
+            <img src="../img/new_city.png">
+            <p>I'll admit, it could be prettier, but the affordance is clear. The user can enter a new city in the text box and once their is text inside the box, an 'x' will become visible on the right hand side to clear out the text if the user chooses. Once a valid city has been entered, the user tapps 'add' and the city is added to the grid view of cities in the dashboard.</p>
+            <h3>Cities Grid-View</h3>
+            <img src="../img/delete_city.png">
+            <p>The cities that have been added by the user appear underneat the settings bar. Their can be as many as the user wants to add and the user can scroll horizontally to view all. The way a user deletes a city is to tap and hold on that city in which case he/she will be confronted with the 'delete' or 'cancel' prompt. This is the least obvious of the interactions with the app, but I think the average device user will understand that to edit an item, a tap and hold is required. I know it comes naturally to me at least.</p>
+        </div>
+      </div>
+
+
+    </div><!-- Container -->
+
+     <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../goodies/js/jquery.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-button.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+  

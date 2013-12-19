@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>KIT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="../../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+   <body>    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../index.html">KIT</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="../index.html">Overview</a></li>
+              <li ><a href="../design.html">Design</a></li>
+              <li class="active"><a href="../implementation.html">Implementation</a></li>
+              <li><a href="../download.html">Download</a></li>
+              <li><a href="http://github.com/mcueno2/kit">Source</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+   <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Implementation Phase</li>           
+              <li class="active"><a href="intro.html">Intro</a></li>
+
+              <li class="nav-header">Breakdown</li>  
+              <li><a href="matt.html">Mathew Pfister</a></li>
+              <li><a href="mike.html">Michael Cueno</a></li>
+              <li><a href="nisarg.html">Nisarg Patel</a></li>
+              <li><a href="avinash.html">Avinash Kunaparaju</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+
+
+        <!-- INSERT CONTENT HERE -->
+        <div class="span9">
+          <h2>Implementation Phase</h2>
+          <p>Matthew Pfister</p>
+          <p>Contributions to KIT Project</p>
+          <ul>
+            <li><a href="#login">Login Animation</a></li>
+            <li><a href="#login">Quick Buttons/Quick Button Menu</a></li>
+            <li><a href="#calc">Calculator Application</a></li>
+            <li><a href="#recipe">Recipe Application</a></li>
+            <li><a href="#commute">Commuting Application</a></li>
+            <li><a href="#saver">Screensaver</a></li>
+            <li><a href="#user">User Screen</a></li>
+            <li><a href="#settings">Settings Window</a></li>
+          </ul>
+        </div>
+
+	<a id="login"></a>
+        <div style="padding:10; text-align: center"><h1>Login Screen</h1></div>
+	<div style="border: 5px solid black; padding: 10px;"> 
+  The login screen was designed to mimic blinds over a window. It was used to give the user the impretion that they were still in the kitchen. In addition, we added the blinds to seperate user applications from public applications, parents don't normally want their kids to mess around with their Gmail, Facebook, and or Twitter accounts. So to login the user will have to enter a password. Behind the blinds is the window, were all the applications will be loaded into (as if you were looking out the kitchen window).</div>
+        <div>
+          <img src = "matt/loginScreen.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px">This is the login screen. The wooden panel highlighted above, is a button that will log into the users account when pressed (and password provided, if necessary). The buttons below the user panels are quick buttons that will launch one of the many applications provided by KIT </p>
+        <br/>      
+	</div>
+        <div>
+          <img src = "matt/openAnimation.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> When the user selects one of the buttons from the quick button menu, let's say the calculator, the wooden panels will be pulled up by the above animation and the application will displayed in the window behind the blinds. A simulation depicting blinds being pulled up from any given window in the kitchen already, which will make the user feel as if they are still in kitchen.</p>
+ 	<br/>             
+	</div>
+
+	<a id="calc"></a>
+	<br/>
+	<hr/>
+	<br/>
+
+	<div style="padding:10; text-align: center"><h1>Calculator Animation</h1></div>
+        <div>
+          <img src = "matt/calc.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> The above screen is the calculator application. It can act as a standard and/or a conversion calculator. It is seperated into four panes the number panel (1), operator panel (2), output (3) and the mode selection (4).  The above picture shows that the calculator is currently selected as a standard calculator. The number two is selected.</p>
+	<br/>             
+ 	</div>
+        <div>
+	<br/>      
+          <img src = "matt/calc4.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> After pushing the number two the value will be displayed in the output panel. The user may now press an operator to continue the equation.</p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/calc5.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> The next value selected is two (as displayed above). The user then may press the equals button to finish the equation (as displayed above)</p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/calc6.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> The equation will be calculated and displayed in the output pane (as above) 2 * 2 = 4</p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/calc1.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> Now let's say the user is baking some almond cookies, but the labels on the packages of the necessary ingrediants are labeled in pounds and the user needs them in ounces. Well the user can open the calculator application select "lbs -> oz" in the mode selection pane and then input the desired amount in pounds</p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/calc2.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> When the user is done inputing the amount in pounds they need only hit the equals button to have the calculator convert it into ounces and display it in the output pane.</p>
+        </div>
+
+	<a id="recipe"></a>
+	<br/>
+	<hr/>
+	<br/>
+
+	<div style="padding:10; text-align: center"><h1>Recipe Application</h1>
+        <div>
+	<br/>      
+          <img src = "matt/cooking3.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> This is the recipe window. This is where all the recipes from the applications API are loaded in to. As for right now the API only has a few items loaded into it, so there aren't that many recipes to look at. This is denoted by the coloring scheme of the index on the right of the above image. Solid black indices mean that there are recipes stored under that given index, and greyed indices mean that there are none. </p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/cooking2.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> When you select one of the black indices, a panel will slide out and all the available recipes (under that index) will be listed in it (as seen above). When the user has found the recipe that they like, they may load it by clicking on the name. </p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/cooking4.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> After it loads four panes will be displayed: instructions (1) ingrediants that are already owned and in the pantry (2 top pane), ingrediants that are needed but not in the pantry (2 bottom pane), nutritional graph (3), and the recipes name (4). The instruction pane slides up and down and is sepereated by step. The ingrediant panes are self explanitory and are loaded based on what is present in the pantry application and what is needed by the recipe. The nutritional graph shows the total amount of calories, protein, fat and carbs per serving size.</p>
+        </div>
+
+	<a id="commute"></a>
+	<br/>
+	<hr/>
+	<br/>
+
+	<div style="padding:10; text-align: center"><h1>Commuting Application</h1>
+        <div>
+	<br/>      
+          <img src = "matt/commute.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px">The commuting application will use the google maps api. When it is loaded it will log you in to your gmail account and bring you to the google maps page (As seen above).</p>
+	</div>
+	</div>
+
+	<a id="saver"></a>
+	<br/>
+	<hr/>
+	<br/>
+
+	<div style="padding:10; text-align: center"><h1>Screensaver</h1>
+        <div>
+	<br/>      
+          <img src = "matt/screensaver.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> The above application is the screensaver and will put the application to sleep, and cycle through images that the user stores in KIT.</p>
+        </div>
+
+	<a id="user"></a>
+	<br/>
+	<hr/>
+	<br/>
+
+	<div style="padding:10; text-align: center"><h1>User Screen</h1>
+        <div>
+	<br/>      
+          <img src = "matt/userScreen3.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> The above application is the User Screen. This is loaded when one of the user panels from the main menu is selected. This application is user specific and is linked to that users: Email, RSS feeds, Twitter, and Facebook accounts. All updates/notifications are displayed in the window, and are easily accessible.</p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/userScreen2.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> The above picture shows how the notifications are swipable and the user can cycle through them in order of arrival. If the user would like to see more detail on the notification, they may click on it and KIT will load the website in the main window.</p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/userScreen1.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> As the above image shows the window can be scrolled up and down as well.</p>
+        </div>
+
+	<a id="settings"></a>
+	<br/>
+	<hr/>
+	<br/>
+
+	<div style="padding:10; text-align: center"><h1>Settings Screen</h1>
+        <div>
+	<br/>      
+          <img src = "matt/settings4.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> The above is the settings window. Here the user can change the language, add new users to KIT, change the cooking API to another services API and change from metric to US standard form of measurement. As seen from the image above the defualt language is English. All changes are saved when you switch to a new application and/or panel</p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/settings1.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> If the user wants to change the language all they must do is select one of the flags from the slider to the right of change language, and all text in the application will be translated to the selected language. They are shown as flags, so that if anyone were to select a language that they didn't know, by accident, they would be easily able to find their own language again by a countries flag.</p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/settings3.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> To change from US standard to the metric system, all the user has to do is select the icon that shows the UN flag (since the rest of the world uses metric), and all means of measurement will be shown in metric standard. If they want US standard all they have to do is press the US flag and it will be switched back.</p>
+        </div>
+        <div>
+	<br/>      
+          <img src = "matt/settings2.png" />
+	<br/>      
+          <p style="border: 5px solid black; padding: 10px"> Lastly if the owners of KIT want to add another user to the system, all they have to do is go to the settings click on add new user and fill in all the desired information. If the new user has a Facebook, Twitter or Gmail account they may fill in their information and KIT will associate the User Screen (from before) with their accounts.</p>
+        </div>
+
+  <!-- DO NOT EDIT ANYTHING BELOW HERE! -->
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../assets/js/jquery.js"></script>
+    <script src="../../assets/js/bootstrap-transition.js"></script>
+    <script src="../../assets/js/bootstrap-alert.js"></script>
+    <script src="../../assets/js/bootstrap-modal.js"></script>
+    <script src="../../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../../assets/js/bootstrap-tab.js"></script>
+    <script src="../../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../../assets/js/bootstrap-popover.js"></script>
+    <script src="../../assets/js/bootstrap-button.js"></script>
+    <script src="../../assets/js/bootstrap-collapse.js"></script>
+    <script src="../../assets/js/bootstrap-carousel.js"></script>
+    <script src="../../assets/js/bootstrap-typeahead.js"></script>
+  </body>
+</html>
+  

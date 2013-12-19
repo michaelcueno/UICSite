@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Download WeatherStation!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+      <link href="../../../goodies/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="../docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+   
+  </head>
+
+   <body>
+
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">WeatherStation</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li ><a href="index.html">Overview</a></li>
+              <li><a href="design.html">Design</a></li>
+              <li><a href="download.html">Download</a></li>
+              <li><a href="http://github.com/mcueno2/WeatherStation">Source</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Download and Bugs</h1>
+      </div>
+
+      <div class="row">
+        <div class="span9">
+          <h2>Installation Guide</h2>
+          <hr></hr>
+          <h3>Installing Qt</h3>
+          <p>Install Qt 5.0 from this link: http://qt-project.org/downloads. It contains the libraries and the IDE 'Qt Creator'. You should need a compiler (Visual Studio, XCode, GCC, ...) if you stick with QML programming.</p> 
+          <hr></hr>
+            <a href="/files/WeatherStation.tar.gz" class="btn btn-primary btn-large" >Download WeatherStation</a>				 
+          <br><br />
+          <p>After downloading, extract and open WeatherStation.qmlproject in Qt Creator. Then, in the 'Project' tab choose an appropriate build environment. Choose the build environment on the bottom left hand corner and then click the green arrow to run the project in a qmlscene.</p>
+          <p> Alternatively, locate your qmlscene executable and enter </p>
+          <pre>
+            qmlscene WeatherStation.qml
+          </pre>
+        </div>
+      </div>
+      <hr>
+
+            <div class="row">
+        <div class="span9">
+          <h2>FILE STRUCTURE</h2>         
+          <pre class="prettyprint">
+-WeatherStation.qml              // Main qml file
+-WeatherStation.qmlproject       // Project file, open this in qt creator if desired 
++qml/                            // Contains all qml files 
+  +Dashboard/                    // Contains qml files related to the 'dashboard' or settings page 
++images/                         // Contains all images used in program
++javascripts/ 
+  Tr.js                          // Translation javascript, used to translate text (not working yet)
+            </pre>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="span9">
+          <h2>known Bugs</h2>
+            <p>Unfortunately, the short developing period for this app forced me to release without addressing a troublesome bug. Namely, the cosmic_unit does not scale correctly. It is based on the index to the swiper wich is 0 at midnight (the reason I didn't catch this one is because I typically worked on the project for an hour before bed, aka midnight..) and so as the day goes on the cosmic_unit is offset more and more until by 5-6 o'clock it changes from sun to moon directly in the center of its orbit. I'll address this soon and continue to make updates</p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="span9">
+          <h2>Warnings</h2>
+            <p>In order to get the hourly data, I used weatherUndergrounds API, which only allows developers using their free service to call the API 10 times an hour. So when testing, keep this in mind, every time you add a new city, that is a new call as well as every time you launch the applicaiton. I don't see this being a huge problem, but in case you go over the limit, you can synthesize the data by going into the code. <br></br>In the WeatherStation.qml file on the bottom is a function called init(), in it you will see comments directing you how to toggle the data from the API to synthesized.</p> 
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+     <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../goodies/js/jquery.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-button.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="../../../goodies/bootstrap/js/bootstrap-typeahead.js"></script>
+  </body>
+</html>

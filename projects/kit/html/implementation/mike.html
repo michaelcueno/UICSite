@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>KIT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="../../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+   <body>    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../index.html">KIT</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="../index.html">Overview</a></li>
+              <li ><a href="../design.html">Design</a></li>
+              <li class="active"><a href="../implementation/intro.html">Implementation</a></li>
+              <li><a href="../download.html">Download</a></li>
+              <li><a href="http://github.com/mcueno2/kit">Source</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+   <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Implementation Phase</li>           
+              <li><a href="intro.html">Intro</a></li>
+
+              <li class="nav-header">Breakdown</li>  
+              <li><a href="matt.html">Mathew Pfister</a></li>
+              <li class="active"><a href="mike.html">Michael Cueno</a></li>
+              <li><a href="nisarg.html">Nisarg Patel</a></li>
+              <li><a href="avinash.html">Avinash Kunaparaju</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+
+
+        <!-- INSERT CONTENT HERE -->
+        <div class="span9">
+          <h2>Main Contributions</h2>
+          <ul>
+            <li>Main Window (Window Sill, pullstring, transitions)</li>
+            <li>Weather App</li>
+            <li>Music App</li>
+            <li>Home Automation App</li>
+            <li>Clock App</li>
+          </ul>
+
+          <hr>
+
+          <h2>Main Window</h2>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/Mainwindow.png">
+	<div style="border: 5px solid black; padding: 10px;"> 
+          <p>This is the main window that the user sees when walking into the kitchen. Literally, it's a window. We wanted to implement the app as if it was a natural part of the kitchen. Thus the main screen is meant to model the kitchen window where each user is a blind in the window. In each blind, you can see immediately the information that is most important to you. There are updates for emails, twitter and rss feeds and alerts which could pertain to traffic or weather alerts. 
+          </p>
+          </div>
+          <br>
+          <p>On the bottom we have the icons for the different apps that will load inside the window. (icons made by Matt)</p>
+          <hr>
+
+          <h2>Weather App</h2>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/weather.png">
+	<div style="border: 5px solid black; padding: 10px;"> 
+          <p>The weather application loads inside the main window. It shows the weather outside and offers the user a swiper that changes the current hour that the weather app is looking at. The sun (or moon) will move through the sky as the user does this and the temperature and other statistics will change based on the hour that the user scrolls to. Where ever the user </p>
+          </div>
+          <br> <h3>Different weather backgrounds</h3>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/weather1.png">
+	<div style="border: 5px solid black; padding: 10px;"> 
+          <p>As the user swipes across the hours, the weather is updated and the background also changes to reflect the weather that current hour is on. This gives a more interactive feel to the weather, allowing the UI to melt away and just give the user what he/she wants, the weather!</p>
+          </div>
+          <br></br>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/weather2.png">
+          <hr>
+
+          <h2>Music App</h2>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/Music.png">
+	<div style="border: 5px solid black; padding: 10px;"> 
+          <p>The music player was designed (like everything else) with a touch interface in mind. The available tracks appear in the left hand sidebar under the heading 'library'. When a user taps on a song in the library, it is loaded into the next song queue as seen in the image below. The album art will load in the main area, and the user can interact with the song with the player on the bottom.</p>
+
+          </div>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/Music2.png">
+	<div style="border: 5px solid black; padding: 10px;"> 
+          <p>A song is loaded into the player, the user can seek using the seeker, play, pause or go to next or previous songs.</p>
+
+          </div>
+          <hr>
+
+          <h2>Clock App</h2>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/clock.png">
+	<div style="border: 5px solid black; padding: 10px;"> 
+          <p>The clock application was implemented to specifications laid out in the final design. The main focus in any clock application should be the clock! That is why it is in the center and the largest thing in the app. The four panels around it show the different 'time-related' functions that can be performed. <br \>
+          The Timer features three spinners that set hours minutes and seconds, which can then be paused, stopped an cleared. When the timer reaches zero, an alarm sounds. There is a drop down menu to choose a specific sound. 
+          </div>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/clock_timer.png">
+	<div style="border: 5px solid black; padding: 10px;"> 
+          The Countdown will count down to a specific data that the user specifies. 
+          Alarms are more or less what is expected. There are a number of alarms that can be turned on or off, and the user can add more by tapping the add more, in which case a new alarm will be added to the list. 
+          </div>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/clock_alarm.png">
+	<div style="border: 5px solid black; padding: 10px;"> 
+          The on off button is implemented as an easy to understand toggle switch
+          <br>
+          The stopwatch features a start, stop and lap buttons which act like any stopwatch should. (Not implemented)
+          </p>
+          </div>
+
+
+          <hr>
+          
+          <h2>Home Automation App</h2>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/homeauto.png">
+	<div style="border: 5px solid black; padding: 10px;"> 
+          <p>The home automation app's most important feature is the thermostat control. This is implemented as a slider on the thermostat that is easily understood as hot and cold based on the color. The temperature is displayed in the center along with picures indicated if the thermostat is heating or cooling.<br \> 
+          On the bottom of the screen we have webcams so the user can see what's going on in their home from one location. 
+          </div>
+          </p>
+          <img src="http://i33.photobucket.com/albums/d76/cueno1323/homeauto_cool.png">
+          <br>
+          <p>
+          <h3>Garage Door</h3>
+	<div style="border: 5px solid black; padding: 10px;"> 
+          <img>The garage door on the left, upper corner, is a pictoral indication of whether the garage is open or closed. A simple push button toggles the garage door. This was chosen instead of a 'open' - 'close' button because of most peoples norms with garage door openers. Most people expect to have one button openers that both open and close the door. 
+          </div>
+          <h3>Leave Button</h3>
+          The leave button is for when you want to leave the house and lock it down. Pushing the leave button opens the garage, unlocks the door and pauses any music playing in the background. Then a count down starts for you to exit the home. Once the count down ends, the door will lock and the thermostat will lower a few degrees. The garage door remains open, since it would be difficult to time that correctly, you wouldn't want to have trouble starting your car and then have it close on you! So it is up to you to close the garage door from the car when you leave. 
+          </div>
+
+        </div>
+
+
+  <!-- DO NOT EDIT ANYTHING BELOW HERE! -->
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../assets/js/jquery.js"></script>
+    <script src="../../assets/js/bootstrap-transition.js"></script>
+    <script src="../../assets/js/bootstrap-alert.js"></script>
+    <script src="../../assets/js/bootstrap-modal.js"></script>
+    <script src="../../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../../assets/js/bootstrap-tab.js"></script>
+    <script src="../../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../../assets/js/bootstrap-popover.js"></script>
+    <script src="../../assets/js/bootstrap-button.js"></script>
+    <script src="../../assets/js/bootstrap-collapse.js"></script>
+    <script src="../../assets/js/bootstrap-carousel.js"></script>
+    <script src="../../assets/js/bootstrap-typeahead.js"></script>
+  </body>
+</html>
+  

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>KIT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+   <body>
+
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">KIT</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li ><a href="index.html">Overview</a></li>
+              <li><a href="design.html">Design</a></li>
+              <li><a href="download.html">Download</a></li>
+              <li><a href="http://github.com/mcueno2/kit">Source</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Download</h1>
+      </div>
+
+      <div class="row">
+        <div class="span9">
+          <h2>Compiled App</h2>
+          <p>The app was compiled for linux (Ubuntu 12.04) and should work if you have the correct qt libraries installed on your system. <br>
+          You can download the tar ball <a 
+href="http://bmccpinstriping.com/kit.tar.gz">here</a>
+          <br />
+          To install, run <br>
+          tar -xvf kit.tar.gz <br>
+          cd kit <br>
+          ./src <br>
+          (Note: the app runs in 1920 x 1080 fullscreen) 
+          There is no quit since the app was meant to run on dedicated hardware, so you will need to kill via the terminal: <br />
+          ps aux | grep src  <br/>
+          kill -9 <pid_for_src> </br> 
+        </p>
+        <h3>IMPORTANT!!</h3>
+        <p>Make sure to change the global root directory to where you downloaded the application. Change the variable "root_dir" found <a href="https://github.com/mcueno2/kit/blob/master/src/qml/src/main.qml#L27">here</a>. This is needed so that the application can access the images properly.</p>
+
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="span9">
+          <h2>Compile from source</h2>
+          To compile from source, download the source from the githup repo <br>
+          git clone https://github.com/mcueno2/kit.git
+          <br>
+          and open src.pro in qtcreator 
+          </p>
+        </div>
+      </div>
+
+
+  <!-- DO NOT EDIT ANYTHING BELOW HERE! -->
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
